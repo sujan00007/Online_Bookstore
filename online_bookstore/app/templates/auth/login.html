@@ -1,0 +1,35 @@
+{% extends "base.html" %}
+
+{% block title %}Login - Online Bookstore{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-6">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h4 class="mb-0">Login</h4>
+            </div>
+            <div class="card-body">
+                <form method="POST" id="loginForm" novalidate>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email address</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Password</label>
+                        <input type="password" class="form-control" id="password" name="password" required minlength="6">
+                        <div class="invalid-feedback">Password must be at least 6 characters.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary w-100">Login</button>
+                </form>
+                <hr>
+                <p class="text-center mb-0">Don't have an account? <a href="{{ url_for('auth.register') }}">Register here</a></p>
+                <p class="text-center text-muted mt-2">
+                    <small>Demo: admin@bookstore.com / admin123 or john@example.com / customer123</small>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

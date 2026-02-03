@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %}Contact Us - Online Bookstore{% endblock %}
+
+{% block content %}
+<h2>Contact Us</h2>
+<hr>
+
+<div class="row">
+    <div class="col-md-8">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Send us a message</h5>
+            </div>
+            <div class="card-body">
+                <form method="POST" id="contactForm" novalidate>
+                    <div class="mb-3">
+                        <label for="name" class="form-label">Name</label>
+                        <input type="text" class="form-control" id="name" name="name" required minlength="3">
+                        <div class="invalid-feedback">Name must be at least 3 characters.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email</label>
+                        <input type="email" class="form-control" id="email" name="email" required>
+                        <div class="invalid-feedback">Please enter a valid email address.</div>
+                    </div>
+                    <div class="mb-3">
+                        <label for="message" class="form-label">Message</label>
+                        <textarea class="form-control" id="message" name="message" rows="5" required minlength="10"></textarea>
+                        <div class="invalid-feedback">Message must be at least 10 characters.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Send Message</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header">
+                <h5 class="mb-0">Contact Information</h5>
+            </div>
+            <div class="card-body">
+                <p><i class="bi bi-geo-alt-fill"></i> <strong>Address:</strong><br>123 Book Street, Reading City, RC 12345</p>
+                <p><i class="bi bi-envelope-fill"></i> <strong>Email:</strong><br>info@bookstore.com</p>
+                <p><i class="bi bi-phone-fill"></i> <strong>Phone:</strong><br>+1 234 567 890</p>
+                <p><i class="bi bi-clock-fill"></i> <strong>Hours:</strong><br>Mon-Fri: 9AM - 6PM<br>Sat-Sun: 10AM - 4PM</p>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}

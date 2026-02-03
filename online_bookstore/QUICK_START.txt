@@ -1,0 +1,175 @@
+========================================
+ONLINE BOOKSTORE - QUICK START GUIDE
+========================================
+
+STEP 1: Open Terminal/Command Prompt
+-------------------------------------
+Navigate to project folder:
+cd online_bookstore
+
+
+STEP 2: Create Virtual Environment
+-----------------------------------
+python -m venv venv
+
+
+STEP 3: Activate Virtual Environment
+-------------------------------------
+Windows:
+    venv\Scripts\activate
+
+Mac/Linux:
+    source venv/bin/activate
+
+
+STEP 4: Install Dependencies
+-----------------------------
+pip install -r requirements.txt
+
+
+STEP 5: Run Application
+------------------------
+python run.py
+
+
+STEP 6: Open Browser
+---------------------
+Go to: http://localhost:5000
+
+
+========================================
+DEMO ACCOUNTS
+========================================
+
+ADMIN ACCOUNT:
+Email: admin@bookstore.com
+Password: admin123
+Access: Full book management + all features
+
+CUSTOMER ACCOUNT:
+Email: john@example.com
+Password: customer123
+Access: Browse and order books
+
+
+========================================
+FEATURES TO TEST
+========================================
+
+AS CUSTOMER:
+✓ Register new account
+✓ Login
+✓ Browse books
+✓ Search books
+✓ Filter by category
+✓ View book details
+✓ Place order
+✓ View order history
+✓ Cancel pending orders
+✓ Update profile
+✓ Contact form
+
+AS ADMIN:
+✓ All customer features +
+✓ Manage Books page
+✓ Add new book
+✓ Edit book
+✓ Delete book
+
+
+========================================
+PROJECT STRUCTURE
+========================================
+
+online_bookstore/
+├── app/                    Main application
+│   ├── routes/            Route handlers
+│   ├── templates/         HTML files
+│   ├── static/            CSS & JS
+│   ├── models.py          Database models
+│   └── __init__.py        App factory
+├── config.py              Configuration
+├── run.py                 Entry point
+└── requirements.txt       Dependencies
+
+
+========================================
+TROUBLESHOOTING
+========================================
+
+Problem: Port 5000 in use
+Solution: Change port in run.py to 5001
+
+Problem: Module not found
+Solution: Activate venv and run pip install -r requirements.txt
+
+Problem: Database error
+Solution: Delete bookstore.db and restart
+
+
+========================================
+TECH STACK
+========================================
+
+Frontend:
+- HTML5 (Semantic)
+- CSS3 (Custom + Bootstrap)
+- Bootstrap 5 (Responsive)
+- JavaScript (Validation)
+
+Backend:
+- Python Flask
+- Flask-SQLAlchemy (ORM)
+- Jinja2 (Templates)
+- Werkzeug (Security)
+
+Database:
+- SQLite (4 tables with relationships)
+
+
+========================================
+ASSESSMENT REQUIREMENTS MET
+========================================
+
+✓ Minimum 5 interconnected pages (10+ pages)
+✓ User registration, login, logout
+✓ User dashboard & profile management
+✓ CRUD operations (Books, Orders, Users)
+✓ Search functionality
+✓ Client-side & server-side validation
+✓ Responsive layout (mobile, tablet, desktop)
+✓ Navigation menu & footer
+✓ Contact form
+✓ Flash messages and error handling
+✓ Database with 4 related tables
+✓ Proper Flask MVC structure
+✓ Blueprints implementation
+✓ Clean folder structure
+✓ Well-commented code
+
+
+========================================
+DOCUMENTATION FILES
+========================================
+
+README.md                  Complete project documentation
+SETUP.md                   Detailed setup instructions
+PROJECT_DOCUMENTATION.md   Technical documentation
+QUICK_START.txt           This file
+
+
+========================================
+READY FOR SUBMISSION
+========================================
+
+✓ Complete working application
+✓ All requirements met
+✓ Professional code structure
+✓ Comprehensive documentation
+✓ Ready for GitHub
+✓ Ready for deployment
+✓ Ready for presentation
+
+
+For detailed information, see README.md
+========================================

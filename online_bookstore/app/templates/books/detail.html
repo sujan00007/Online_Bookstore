@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}{{ book.title }} - Online Bookstore{% endblock %}
+
+{% block content %}
+<nav aria-label="breadcrumb">
+    <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{{ url_for('main.index') }}">Home</a></li>
+        <li class="breadcrumb-item"><a href="{{ url_for('books.list_books') }}">Books</a></li>
+        <li class="breadcrumb-item active">{{ book.title }}</li>
+    </ol>
+</nav>
+
+<div class="row">
+    <div class="col-md-8">
+        <h2>{{ book.title }}</h2>
+        <h4 class="text-muted">by {{ book.author }}</h4>
+        <p class="badge bg-secondary">{{ book.category.name }}</p>
+        <hr>
+        <h3 class="text-primary">${{ "%.2f"|format(book.price) }}</h3>
+        <p><strong>Stock Available:</strong> {{ book.stock }} units</p>
+        <hr>
+        <h5>Description</h5>
+        <p>{{ book.description if book.description else 'No description available.' }}</p>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card">
+            <div class="card-header bg-primary text-white">
+                <h5 class="mb-0">Order Now</h5>
+            </div>
+            <div class="card-body">
+                {% if session.user_id %}
+                    {% if book.stock > 0 %}
+                    <form method="POST" action="{{ url_for('orders.create', book_id=book.id) }}" id="orderForm" novalidate>
+                        <div class="mb-3">
+                            <label for="quantity" class="form-label">Quantity</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1" max="{{ book.stock }}" required>
+                            <div class="invalid-feedback">Please enter a valid quantity (1-{{ book.stock }}).</div>
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Place Order</button>
+                    </form>
+                    {% else %}
+                    <div class="alert alert-warning">Out of stock</div>
+                    {% endif %}
+                {% else %}
+                <p>Please <a href="{{ url_for('auth.login') }}">login</a> to place an order.</p>
+                {% endif %}
+            </div>
+        </div>
+        
+        {% if session.user_role == 'admin' %}
+        <div class="card mt-3">
+            <div class="card-header">
+                <h6 class="mb-0">Admin Actions</h6>
+            </div>
+            <div class="card-body">
+                <a href="{{ url_for('books.edit', id=book.id) }}" class="btn btn-warning btn-sm w-100 mb-2">Edit Book</a>
+                <form method="POST" action="{{ url_for('books.delete', id=book.id) }}" onsubmit="return confirm('Are you sure?');">
+                    <button type="submit" class="btn btn-danger btn-sm w-100">Delete Book</button>
+                </form>
+            </div>
+        </div>
+        {% endif %}
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,72 @@
+{% extends "base.html" %}
+
+{% block title %}Dashboard - Online Bookstore{% endblock %}
+
+{% block content %}
+<h2>Welcome, {{ user.name }}!</h2>
+<hr>
+
+<div class="row">
+    <div class="col-md-4 mb-3">
+        <div class="card text-white bg-primary">
+            <div class="card-body">
+                <h5 class="card-title">Total Orders</h5>
+                <h2>{{ user.orders|length }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card text-white bg-success">
+            <div class="card-body">
+                <h5 class="card-title">Account Type</h5>
+                <h2>{{ user.role|title }}</h2>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4 mb-3">
+        <div class="card text-white bg-info">
+            <div class="card-body">
+                <h5 class="card-title">Member Since</h5>
+                <h2>{{ user.created_at.strftime('%Y') }}</h2>
+            </div>
+        </div>
+    </div>
+</div>
+
+<h4 class="mt-4">Recent Orders</h4>
+{% if orders %}
+<div class="table-responsive">
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Order ID</th>
+                <th>Book</th>
+                <th>Quantity</th>
+                <th>Total</th>
+                <th>Status</th>
+                <th>Date</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for order in orders %}
+            <tr>
+                <td>#{{ order.id }}</td>
+                <td>{{ order.book.title }}</td>
+                <td>{{ order.quantity }}</td>
+                <td>${{ "%.2f"|format(order.total_price) }}</td>
+                <td><span class="badge bg-{{ 'success' if order.status == 'completed' else 'warning' if order.status == 'pending' else 'danger' }}">{{ order.status|title }}</span></td>
+                <td>{{ order.created_at.strftime('%Y-%m-%d') }}</td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{% else %}
+<p class="text-muted">No orders yet. <a href="{{ url_for('books.list_books') }}">Start shopping!</a></p>
+{% endif %}
+
+<div class="mt-4">
+    <a href="{{ url_for('books.list_books') }}" class="btn btn-primary">Browse Books</a>
+    <a href="{{ url_for('orders.list_orders') }}" class="btn btn-secondary">View All Orders</a>
+</div>
+{% endblock %}

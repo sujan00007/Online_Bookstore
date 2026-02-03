@@ -1,0 +1,41 @@
+{% extends "base.html" %}
+
+{% block title %}Books - Online Bookstore{% endblock %}
+
+{% block content %}
+<h2>{% if search_query %}Search Results for "{{ search_query }}"{% else %}All Books{% endif %}</h2>
+<hr>
+
+{% if categories %}
+<div class="mb-3">
+    <a href="{{ url_for('books.list_books') }}" class="btn btn-sm btn-outline-primary">All</a>
+    {% for category in categories %}
+    <a href="{{ url_for('books.list_books', category=category.id) }}" class="btn btn-sm btn-outline-primary">{{ category.name }}</a>
+    {% endfor %}
+</div>
+{% endif %}
+
+{% if books %}
+<div class="row">
+    {% for book in books %}
+    <div class="col-md-4 mb-4">
+        <div class="card h-100">
+            <div class="card-body">
+                <h5 class="card-title">{{ book.title }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">by {{ book.author }}</h6>
+                <p class="badge bg-secondary">{{ book.category.name }}</p>
+                <p class="card-text">{{ book.description[:100] if book.description else 'No description available' }}...</p>
+                <p class="text-primary fw-bold">${{ "%.2f"|format(book.price) }}</p>
+                <p class="text-muted">Stock: {{ book.stock }}</p>
+            </div>
+            <div class="card-footer">
+                <a href="{{ url_for('books.detail', id=book.id) }}" class="btn btn-primary btn-sm">View Details</a>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% else %}
+<div class="alert alert-info">No books found.</div>
+{% endif %}
+{% endblock %}
