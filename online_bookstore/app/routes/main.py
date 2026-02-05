@@ -18,7 +18,7 @@ def login_required(f):
 @bp.route('/')
 def index():
     """Home page with featured books"""
-    books = Book.query.limit(6).all()
+    books = Book.query.limit(9).all()
     return render_template('index.html', books=books)
 
 @bp.route('/dashboard')

@@ -1,10 +1,22 @@
 # Online Bookstore Website
 
-A complete full-stack web application for an online bookstore built with Flask, Bootstrap, and SQLite.
+A complete full-stack web application for an online bookstore built with Flask, Bootstrap, and SQLite featuring a modern dark/light theme design.
 
 ## 🎓 University Project
 
-This project demonstrates a complete web development solution using modern technologies and best practices.
+This project demonstrates a complete web development solution using modern technologies and best practices with professional UI/UX design.
+
+## 🎨 Design Features
+
+- **Modern Color Scheme**: 
+  - Primary: Royal Blue (#2563EB)
+  - Text: Charcoal (#36454F)
+  - Dark Navbar & Footer: Dark Navy (#0F172A)
+  - Clean White Content Area
+- **Professional UI**: Gradient effects, shadows, and smooth animations
+- **Book Cover Images**: Dynamic book covers with API integration and fallback placeholders
+- **Responsive Cards**: Hover effects with 3D transformations
+- **30+ Books**: Comprehensive collection across 5 categories
 
 ## 🚀 Features
 
@@ -12,13 +24,17 @@ This project demonstrates a complete web development solution using modern techn
 - **User Roles**: Customer and Admin roles with different permissions
 - **Book Management**: Full CRUD operations for books (Admin only)
 - **Order System**: Place orders, view order history, cancel pending orders
-- **Search Functionality**: Search books by title or author
+- **Search Functionality**: Search books by title or author with styled search bar
 - **Category Filtering**: Browse books by categories
 - **Responsive Design**: Mobile-first design using Bootstrap 5
 - **Form Validation**: Client-side and server-side validation
 - **Flash Messages**: User feedback for all actions
 - **Protected Routes**: Authentication required for certain pages
 - **Profile Management**: Update user profile and password
+- **Book Cover Images**: Dynamic images with API integration
+- **Modern UI**: Dark navbar/footer with white content area
+- **Professional Animations**: Hover effects and smooth transitions
+- **30 Books Collection**: Diverse selection across multiple categories
 
 ## 🛠️ Tech Stack
 
@@ -169,7 +185,7 @@ http://127.0.0.1:5000/
 | Add Book | `/books/create` | Create new book (Admin) | Yes (Admin) |
 | Edit Book | `/books/edit/<id>` | Edit book (Admin) | Yes (Admin) |
 
-## ✨ Key Features Explained
+## 🎯 Key Features Explained
 
 ### 1. Authentication System
 - Password hashing using Werkzeug
@@ -201,6 +217,15 @@ http://127.0.0.1:5000/
 - Bootstrap grid system
 - Responsive navigation
 - Optimized for all screen sizes
+
+### 6. Modern UI/UX
+- Dark navbar with royal blue logo
+- White content area for readability
+- Charcoal text for professional look
+- Book cover images with fallback
+- Smooth hover animations
+- Professional card designs
+- Royal blue accent colors
 
 ## 🔒 Security Features
 
