@@ -11,9 +11,9 @@
 </head>
 <body>
     <!-- Navigation -->
-    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #0F172A; box-shadow: 0 2px 4px rgba(0,0,0,0.3); border-bottom: 1px solid #334155;">
+    <nav class="navbar navbar-expand-lg navbar-light">
         <div class="container">
-            <a class="navbar-brand" href="{{ url_for('main.index') }}" style="color: #2563EB; font-weight: bold;">
+            <a class="navbar-brand" href="{{ url_for('main.index') }}">
                 <i class="bi bi-book"></i> Online Bookstore
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
@@ -34,8 +34,8 @@
                 
                 <!-- Search Form -->
                 <form class="d-flex me-3" action="{{ url_for('main.search') }}" method="get">
-                    <input class="form-control me-2" type="search" name="q" placeholder="Search books..." aria-label="Search" style="border: 2px solid #2563EB; background: #1E293B; color: #F8FAFC;">
-                    <button class="btn" type="submit" style="font-weight: 600; border: 2px solid #2563EB; color: #2563EB;">Search</button>
+                    <input class="form-control me-2" type="search" name="q" placeholder="Search books..." aria-label="Search">
+                    <button class="btn btn-outline-primary" type="submit">Search</button>
                 </form>
                 
                 <ul class="navbar-nav">
@@ -90,28 +90,28 @@
     </main>
 
     <!-- Footer -->
-    <footer class="mt-5 py-4" style="background-color: #0F172A; color: #CBD5E1;">
+    <footer class="mt-5 py-4">
         <div class="container">
             <div class="row">
                 <div class="col-md-4">
-                    <h5 style="color: #F8FAFC;">Online Bookstore</h5>
+                    <h5>Online Bookstore</h5>
                     <p>Your trusted source for quality books</p>
                 </div>
                 <div class="col-md-4">
-                    <h5 style="color: #F8FAFC;">Quick Links</h5>
+                    <h5>Quick Links</h5>
                     <ul class="list-unstyled">
-                        <li><a href="{{ url_for('main.index') }}" style="color: #CBD5E1; text-decoration: none;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Home</a></li>
-                        <li><a href="{{ url_for('books.list_books') }}" style="color: #CBD5E1; text-decoration: none;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Books</a></li>
-                        <li><a href="{{ url_for('main.contact') }}" style="color: #CBD5E1; text-decoration: none;" onmouseover="this.style.color='#38BDF8'" onmouseout="this.style.color='#CBD5E1'">Contact</a></li>
+                        <li><a href="{{ url_for('main.index') }}">Home</a></li>
+                        <li><a href="{{ url_for('books.list_books') }}">Books</a></li>
+                        <li><a href="{{ url_for('main.contact') }}">Contact</a></li>
                     </ul>
                 </div>
                 <div class="col-md-4">
-                    <h5 style="color: #F8FAFC;">Contact Info</h5>
+                    <h5>Contact Info</h5>
                     <p><i class="bi bi-envelope"></i> sujanbharati00@gmail.com</p>
                     <p><i class="bi bi-phone"></i> +977 9847258796</p>
                 </div>
             </div>
-            <hr style="background-color: #475569; border: none; height: 2px; opacity: 1; margin: 1.5rem 0;">
+            <hr style="border-color: #495057; margin: 1.5rem 0;">
             <div class="text-center">
                 <p>&copy; 2026 Online Bookstore. All rights reserved.</p>
             </div>

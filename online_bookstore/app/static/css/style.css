@@ -1,5 +1,5 @@
 /**
- * Custom styles for Online Bookstore
+ * Professional Color Scheme for Online Bookstore
  */
 
 /* Global Styles */
@@ -7,8 +7,8 @@ body {
     min-height: 100vh;
     display: flex;
     flex-direction: column;
-    background-color: #F8FAFC;
-    color: #475569;
+    background-color: #F8F9FA;
+    color: #212529;
 }
 
 main {
@@ -17,66 +17,70 @@ main {
 }
 
 h1, h2, h3, h4, h5, h6 {
-    color: #0F172A;
+    color: #1A1A2E;
 }
 
 a {
-    color: #2563EB;
+    color: #0F4C81;
     transition: color 0.3s;
 }
 
 a:hover {
-    color: #1E40AF;
+    color: #16213E;
 }
 
 /* Navigation */
 .navbar-brand {
     font-weight: bold;
     font-size: 1.5rem;
-    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    color: #0F4C81 !important;
 }
 
 .navbar {
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    backdrop-filter: blur(10px);
+    background-color: #FFFFFF !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    border-bottom: 1px solid #E9ECEF;
 }
 
 .navbar .nav-link {
-    font-weight: 600;
+    font-weight: 500;
     transition: all 0.3s ease;
     padding: 0.5rem 1rem;
+    color: #495057 !important;
 }
 
 .navbar .nav-link:hover {
-    color: #38BDF8 !important;
-    transform: translateY(-2px);
+    color: #0F4C81 !important;
 }
 
 /* Cards */
 .card {
     transition: transform 0.2s, box-shadow 0.2s;
-    background-color: #1E293B;
-    border: 1px solid #334155;
-    color: #CBD5E1;
+    background-color: #FFFFFF;
+    border: 1px solid #DEE2E6;
+    color: #212529;
+    border-radius: 8px;
 }
 
 .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 15px rgba(56, 189, 248, 0.3);
+    box-shadow: 0 4px 15px rgba(15, 76, 129, 0.15);
 }
 
 .card-title {
-    color: #F8FAFC;
+    color: #1A1A2E;
 }
 
 .card-footer {
-    background-color: #0F172A;
-    border-top: 1px solid #334155;
+    background-color: #F8F9FA;
+    border-top: 1px solid #DEE2E6;
 }
 
 /* Buttons */
 .btn {
     transition: all 0.3s ease;
+    border-radius: 6px;
+    font-weight: 500;
 }
 
 .btn:hover {
@@ -84,82 +88,93 @@ a:hover {
 }
 
 .btn-primary {
-    background-color: #2563EB;
-    border-color: #2563EB;
+    background-color: #0F4C81;
+    border-color: #0F4C81;
 }
 
 .btn-primary:hover {
-    background-color: #1E40AF;
-    border-color: #1E40AF;
+    background-color: #16213E;
+    border-color: #16213E;
 }
 
 /* Forms */
+.form-control {
+    border: 1px solid #CED4DA;
+    border-radius: 6px;
+}
+
 .form-control:focus {
-    border-color: #2563EB;
-    box-shadow: 0 0 0 0.2rem rgba(37, 99, 235, 0.25);
+    border-color: #0F4C81;
+    box-shadow: 0 0 0 0.2rem rgba(15, 76, 129, 0.25);
 }
 
 .form-control::placeholder {
-    color: #94A3B8;
+    color: #6C757D;
     opacity: 1;
 }
 
 /* Price styling */
 .price-tag {
-    color: #16A34A;
+    color: #28A745;
     font-weight: bold;
 }
 
 /* Tables */
 .table-responsive {
-    border-radius: 0.5rem;
+    border-radius: 8px;
     overflow: hidden;
+}
+
+.table {
+    color: #212529;
 }
 
 /* Footer */
 footer {
     margin-top: auto;
-    background-color: #0F172A;
-    color: #CBD5E1;
+    background-color: #1A1A2E;
+    color: #E9ECEF;
 }
 
 footer h5 {
-    color: #F8FAFC;
+    color: #FFFFFF;
 }
 
 footer a {
     text-decoration: none;
     transition: color 0.3s;
-    color: #CBD5E1;
+    color: #ADB5BD;
 }
 
 footer a:hover {
-    color: #38BDF8;
+    color: #FFFFFF;
 }
 
 /* Hero Section */
 .jumbotron {
-    background: linear-gradient(135deg, #1E293B 0%, #0F172A 100%);
+    background: linear-gradient(135deg, #0F4C81 0%, #16213E 100%);
     color: white;
-    border: 2px solid #2563EB;
-    box-shadow: 0 8px 32px rgba(37, 99, 235, 0.4);
+    border: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+    border-radius: 8px;
 }
 
 .jumbotron .btn {
-    box-shadow: 0 4px 14px rgba(37, 99, 235, 0.5);
+    box-shadow: 0 4px 14px rgba(0,0,0,0.2);
     transition: all 0.3s ease;
 }
 
 .jumbotron .btn:hover {
-    box-shadow: 0 6px 20px rgba(30, 64, 175, 0.6);
+    box-shadow: 0 6px 20px rgba(0,0,0,0.3);
     transform: translateY(-2px);
 }
 
 /* Badges */
 .badge {
     padding: 0.5em 0.75em;
-    font-weight: 600;
-    letter-spacing: 0.5px;
+    font-weight: 500;
+    letter-spacing: 0.3px;
+    border-radius: 4px;
 }
 
 /* Professional spacing */
@@ -175,7 +190,8 @@ html {
 
 /* Alerts */
 .alert {
-    border-radius: 0.5rem;
+    border-radius: 8px;
+    border: none;
 }
 
 /* Responsive adjustments */
@@ -205,14 +221,14 @@ html {
 }
 
 ::-webkit-scrollbar-track {
-    background: #f1f1f1;
+    background: #F8F9FA;
 }
 
 ::-webkit-scrollbar-thumb {
-    background: #888;
+    background: #ADB5BD;
     border-radius: 5px;
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #555;
+    background: #6C757D;
 }

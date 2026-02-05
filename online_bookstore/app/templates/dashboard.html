@@ -3,14 +3,14 @@
 {% block title %}Dashboard - Online Bookstore{% endblock %}
 
 {% block content %}
-<div style="background: linear-gradient(135deg, #2d2d2d 0%, #1a1a1a 100%); padding: 2rem; border-radius: 15px; margin-bottom: 2rem; box-shadow: 0 4px 15px rgba(0,0,0,0.3);">
-    <h2 style="color: #ffffff; font-weight: bold;">Welcome, {{ user.name }}! 👋</h2>
+<div class="jumbotron p-4 rounded mb-4">
+    <h2>Welcome, {{ user.name }}! 👋</h2>
 </div>
 <hr>
 
 <div class="row">
     <div class="col-md-4 mb-3">
-        <div class="card text-white bg-dark" style="border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-cart-check"></i> Total Orders</h5>
                 <h2>{{ user.orders|length }}</h2>
@@ -18,7 +18,7 @@
         </div>
     </div>
     <div class="col-md-4 mb-3">
-        <div class="card text-white" style="background: #1a1a1a; border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-person-badge"></i> Account Type</h5>
                 <h2>{{ user.role|title }}</h2>
@@ -26,7 +26,7 @@
         </div>
     </div>
     <div class="col-md-4 mb-3">
-        <div class="card text-white" style="background: #2d2d2d; border: none; box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">
+        <div class="card">
             <div class="card-body">
                 <h5 class="card-title"><i class="bi bi-calendar-check"></i> Member Since</h5>
                 <h2>{{ user.created_at.strftime('%Y') }}</h2>
@@ -35,11 +35,11 @@
     </div>
 </div>
 
-<h4 class="mt-4" style="color: #333; font-weight: bold;"><i class="bi bi-clock-history"></i> Recent Orders</h4>
+<h4 class="mt-4"><i class="bi bi-clock-history"></i> Recent Orders</h4>
 {% if orders %}
-<div class="table-responsive" style="border-radius: 10px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1);">
+<div class="table-responsive">
     <table class="table table-striped">
-        <thead>
+        <thead class="table-dark">
             <tr>
                 <th>Order ID</th>
                 <th>Book</th>
@@ -68,7 +68,7 @@
 {% endif %}
 
 <div class="mt-4">
-    <a href="{{ url_for('books.list_books') }}" class="btn btn-lg btn-dark" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">Browse Books</a>
-    <a href="{{ url_for('orders.list_orders') }}" class="btn btn-lg btn-secondary" style="box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);">View All Orders</a>
+    <a href="{{ url_for('books.list_books') }}" class="btn btn-lg btn-primary">Browse Books</a>
+    <a href="{{ url_for('orders.list_orders') }}" class="btn btn-lg btn-secondary">View All Orders</a>
 </div>
 {% endblock %}
