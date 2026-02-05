@@ -136,7 +136,7 @@ python run.py
 ### Step 5: Access the Application
 Open your browser and navigate to:
 ```
-http://127.0.0.1:5000
+http://127.0.0.1:5000/
 ```
 
 ## 👤 Demo Accounts
