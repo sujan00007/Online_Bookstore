@@ -15,6 +15,7 @@ A complete full-stack web application for an online bookstore built with Flask, 
 - ✅ **Book Management** - Full CRUD operations (Admin only)
 - ✅ **Order System** - Place orders, view history, cancel pending orders
 - ✅ **Search & Filter** - Search books by title/author, filter by category
+- ✅ **Professional Design** - Clean, modern UI with navy blue color scheme
 - ✅ **Responsive Design** - Mobile-first design using Bootstrap 5
 - ✅ **Form Validation** - Client-side (JavaScript) and server-side (Flask)
 - ✅ **Flash Messages** - User feedback for all actions
@@ -237,10 +238,10 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 👨‍💻 Author
 
-**Your Name**
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your Name](https://linkedin.com/in/yourprofile)
-- Email: your.email@example.com
+**Sujan Bharati**
+- Location: Kathmandu, Nepal
+- Email: sujanbharati00@gmail.com
+- Phone: +977 9847258796
 
 ## 🙏 Acknowledgments
 
@@ -251,7 +252,7 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 ## 📞 Support
 
-For support, email your.email@example.com or open an issue on GitHub.
+For support, email sujanbharati00@gmail.com or open an issue on GitHub.
 
 ## 🌟 Show your support
 
@@ -259,4 +260,4 @@ Give a ⭐️ if this project helped you!
 
 ---
 
-**Made with ❤️ for university assessment and portfolio showcase**
+**Made with ❤️ in Kathmandu, Nepal**

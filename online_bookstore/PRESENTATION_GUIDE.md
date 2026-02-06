@@ -62,13 +62,15 @@ Use this guide to present your project confidently and professionally.
 #### A. Home Page (30 seconds)
 1. Open browser to `http://localhost:5000`
 2. Point out:
-   - Professional navigation bar
+   - Professional navigation bar with white background
+   - Navy blue gradient hero section
    - Search functionality
    - Featured books section
+   - Contact information (Email, Phone, Location: Kathmandu, Nepal)
    - Responsive footer
    - Feature highlights
 
-> "This is the landing page with featured books. Notice the clean, professional design using Bootstrap 5."
+> "This is the landing page with featured books. Notice the clean, professional design with navy blue gradient hero section and modern card layouts."
 
 #### B. Browse Books (1 minute)
 1. Click "Books" in navigation
