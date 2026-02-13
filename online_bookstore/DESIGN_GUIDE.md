@@ -3,119 +3,128 @@
 ## 🎨 Color Palette
 
 ### Primary Colors
-- **Royal Blue**: `#2563EB` - Primary buttons, links, accents
-- **Deep Blue**: `#1E40AF` - Hover states
-- **Charcoal**: `#36454F` - Main headings and text
+- **Navy Blue**: `#0F4C81` - Primary buttons, links, accents
+- **Dark Navy**: `#16213E` - Hover states, secondary elements
+- **Charcoal**: `#1A1A2E` - Main headings, footer background
 
 ### Background Colors
-- **White**: `#FFFFFF` - Main content area, cards
-- **Soft White**: `#F8FAFC` - Card footers, subtle backgrounds
-- **Light Gray**: `#E2E8F0` - Borders
+- **White**: `#FFFFFF` - Main content area, cards, navbar
+- **Light Gray**: `#F8F9FA` - Page background, card footers
+- **Border Gray**: `#DEE2E6` - Card borders, dividers
 
 ### Text Colors
-- **Dark Navy**: `#0F172A` - Card titles, important text
-- **Gray**: `#475569` - Body text
-- **Slate Gray**: `#64748B` - Secondary text
-- **Light Gray**: `#94A3B8` - Muted text
+- **Dark Text**: `#212529` - Body text, primary content
+- **Charcoal**: `#1A1A2E` - Headings, important text
+- **Medium Gray**: `#495057` - Navigation links
+- **Muted Gray**: `#6C757D` - Secondary text, placeholders
 
 ### Accent Colors
-- **Green**: `#16A34A` - Price tags, success indicators
-- **Cyan**: `#38BDF8` - Link hover in footer
+- **Success Green**: `#28A745` - Price tags, success states
+- **White**: `#FFFFFF` - Hero section button, contrast elements
 
-### Dark Theme (Navbar & Footer)
-- **Background**: `#0F172A` - Dark navy
-- **Text**: `#CBD5E1` - Light gray
-- **Headings**: `#F8FAFC` - Soft white
-- **Borders**: `#334155` - Slate borders
+### Footer Theme
+- **Background**: `#1A1A2E` - Dark charcoal
+- **Text**: `#E9ECEF` - Light gray
+- **Headings**: `#FFFFFF` - Pure white
+- **Links**: `#ADB5BD` - Medium gray
+- **Link Hover**: `#FFFFFF` - White
 
 ## 🎯 Design Principles
 
-### 1. Contrast & Readability
-- Dark navbar/footer with light text
-- White content area with dark text
-- High contrast for accessibility
+### 1. Professional & Clean
+- White navbar with subtle shadow
+- Clean card designs with minimal borders
+- Professional navy blue color scheme
+- Deployment-ready appearance
 
-### 2. Professional Appearance
-- Consistent color scheme
-- Proper spacing and padding
-- Clean typography
-- Subtle shadows and borders
+### 2. Modern & Accessible
+- High contrast ratios for readability
+- Consistent spacing and padding
+- Rounded corners (6-8px)
+- Subtle shadows for depth
 
 ### 3. Visual Hierarchy
-- Large headings in charcoal
-- Royal blue for interactive elements
-- Green for prices (draws attention)
-- Muted colors for secondary info
+- Navy blue for primary actions
+- Green for prices (attention-grabbing)
+- Charcoal for headings
+- Gray for secondary information
 
 ### 4. User Experience
-- Smooth hover effects
-- Clear call-to-action buttons
-- Visible form inputs
+- Smooth transitions (0.3s ease)
+- Clear hover states
 - Intuitive navigation
+- Responsive design
 
 ## 📐 Layout Structure
 
 ### Navbar
-- Dark navy background (#0F172A)
-- Royal blue logo (#2563EB)
-- Bold navigation links
-- Royal blue search border
-- White text input with dark background
+- White background (#FFFFFF)
+- Navy blue logo (#0F4C81)
+- Medium gray links (#495057)
+- Navy blue hover (#0F4C81)
+- Subtle shadow: `0 2px 4px rgba(0,0,0,0.1)`
+- Border bottom: `1px solid #E9ECEF`
 
 ### Hero Section
-- White background
-- Charcoal headings and text
-- Royal blue divider line
-- Charcoal button with hover effect
+- Navy blue gradient background
+- Linear gradient: `135deg, #0F4C81 0%, #16213E 100%`
+- White text
+- White button with hover effect
+- Rounded corners: `8px`
+- Shadow: `0 4px 20px rgba(0,0,0,0.1)`
 
 ### Featured Books
-- White cards with light borders
-- Book cover images (300px height)
-- Green price badges
-- Royal blue category badges
-- Royal blue "View Details" buttons
+- White cards (#FFFFFF)
+- Light gray borders (#DEE2E6)
+- Rounded corners: `8px`
+- Green price display (#28A745)
+- Navy blue category badges (#0F4C81)
+- Navy blue "View Details" buttons
 
 ### Footer
-- Dark navy background (#0F172A)
-- Light gray text (#CBD5E1)
-- Soft white headings (#F8FAFC)
-- Cyan hover on links (#38BDF8)
-- Visible gray divider line
+- Dark charcoal background (#1A1A2E)
+- Light gray text (#E9ECEF)
+- White headings (#FFFFFF)
+- Medium gray links (#ADB5BD)
+- White hover on links
+- Contact info: Email, Phone, Location (Kathmandu, Nepal)
 
-## 🖼️ Book Card Design
+## 🖼️ Card Design
 
 ### Structure
-1. **Cover Image** (300px)
-   - Placeholder or API image
-   - Price badge overlay (top-right)
+1. **Card Container**
+   - White background
+   - Border: `1px solid #DEE2E6`
+   - Border radius: `8px`
+   - Hover shadow: `0 4px 15px rgba(15, 76, 129, 0.15)`
    
 2. **Card Body**
-   - Title (dark navy)
-   - Author with icon (slate gray)
-   - Description (gray)
-   - Stock info and category badge
+   - Title (charcoal #1A1A2E)
+   - Subtitle (gray #212529)
+   - Content text
+   - Proper padding
 
 3. **Card Footer**
-   - Soft white background
-   - Full-width button
-   - Royal blue with hover effect
+   - Light gray background (#F8F9FA)
+   - Border top: `1px solid #DEE2E6`
+   - Action buttons
 
 ### Hover Effects
-- Card lifts up (translateY -10px)
-- Blue shadow appears
-- Button darkens on hover
+- Card lifts up: `translateY(-5px)`
+- Shadow appears with navy blue tint
+- Smooth transition: `0.2s`
 
 ## 🎭 Animations
 
 ### Hover Animations
-- **Cards**: Lift up with shadow
-- **Buttons**: Color change + lift + shadow
-- **Links**: Color change to cyan/deep blue
-- **Nav Links**: Cyan color + slight lift
+- **Cards**: Lift with navy blue shadow
+- **Buttons**: Darken + lift (translateY -2px)
+- **Links**: Color change to navy blue
+- **Nav Links**: Navy blue color change
 
 ### Transitions
-- All: 0.3s ease
-- Cards: 0.6s ease
+- Standard: `0.3s ease`
+- Cards: `0.2s` for transform and shadow
 - Smooth and professional
 
 ## 📱 Responsive Breakpoints
@@ -125,6 +134,7 @@
 - Stacked cards
 - Hamburger menu
 - Full-width buttons
+- Smaller font sizes
 
 ### Tablet (768px - 991px)
 - Two column layout
@@ -138,49 +148,56 @@
 ## ✨ Special Effects
 
 ### Shadows
-- Cards: `0 2px 8px rgba(0,0,0,0.08)`
-- Hover: `0 12px 40px rgba(37, 99, 235, 0.3)`
-- Buttons: `0 4px 14px rgba(37, 99, 235, 0.4)`
+- Navbar: `0 2px 4px rgba(0,0,0,0.1)`
+- Cards: `0 4px 15px rgba(15, 76, 129, 0.15)` on hover
+- Hero: `0 4px 20px rgba(0,0,0,0.1)`
+- Buttons: Subtle shadows on hover
 
 ### Borders
-- Cards: `1px solid #E2E8F0`
-- Hero: `2px solid #E2E8F0`
-- Search: `2px solid #2563EB`
+- Cards: `1px solid #DEE2E6`
+- Navbar: `1px solid #E9ECEF`
+- Inputs: `1px solid #CED4DA`
+- Focus: `#0F4C81` with shadow
 
 ### Border Radius
-- Cards: `12px`
-- Buttons: `8px`
-- Badges: `20px`
+- Cards: `8px`
+- Buttons: `6px`
+- Inputs: `6px`
+- Hero section: `8px`
 
 ## 🎨 Typography
 
 ### Fonts
 - System fonts (Bootstrap default)
-- Font weights: 400 (normal), 600 (semi-bold), 700 (bold)
+- Font weights: 400 (normal), 500 (medium), 600 (semi-bold), 700 (bold)
 
 ### Sizes
-- Display: 2.5rem - 3.5rem
+- Display: 2rem - 3rem
 - Headings: 1.5rem - 2rem
-- Body: 0.9rem - 1rem
-- Small: 0.8rem - 0.85rem
+- Body: 1rem
+- Small: 0.875rem
 
 ## 🔧 Implementation Notes
 
 ### CSS Classes Used
 - Bootstrap 5 utility classes
-- Custom inline styles for precise control
-- Hover effects via onmouseover/onmouseout
+- Custom CSS in style.css
+- Professional color variables
+- Consistent styling throughout
 
 ### Color Consistency
-- Royal blue (#2563EB) for all primary actions
-- Charcoal (#36454F) for main text
-- Green (#16A34A) for prices
-- Dark navy (#0F172A) for navbar/footer
+- Navy blue (#0F4C81) for all primary actions
+- Charcoal (#1A1A2E) for headings and footer
+- Green (#28A745) for prices
+- White (#FFFFFF) for navbar and cards
+- Light gray (#F8F9FA) for backgrounds
 
 ## 📊 Design Checklist
 
-- [x] Consistent color palette
-- [x] Professional typography
+- [x] Professional navy blue color scheme
+- [x] Clean white navbar
+- [x] Modern gradient hero section
+- [x] Consistent typography
 - [x] Proper spacing and padding
 - [x] Smooth animations
 - [x] Responsive design
@@ -188,19 +205,28 @@
 - [x] Clear visual hierarchy
 - [x] Intuitive navigation
 - [x] Professional card designs
-- [x] Book cover integration
+- [x] Deployment-ready appearance
 
 ## 🌟 Design Highlights
 
-1. **Dark Navbar/Footer** - Professional contrast
-2. **White Content** - Clean and readable
-3. **Royal Blue Accents** - Modern and trustworthy
-4. **Charcoal Text** - Sophisticated and clear
-5. **Book Covers** - Visual appeal
-6. **Hover Effects** - Interactive and engaging
-7. **Green Prices** - Eye-catching
-8. **Consistent Spacing** - Professional layout
+1. **Clean White Navbar** - Professional and modern
+2. **Navy Blue Gradient Hero** - Eye-catching and trustworthy
+3. **White Cards** - Clean and readable
+4. **Navy Blue Accents** - Consistent branding
+5. **Charcoal Footer** - Professional contrast
+6. **Subtle Shadows** - Depth without distraction
+7. **Green Prices** - Attention-grabbing
+8. **Rounded Corners** - Modern aesthetic
+9. **Smooth Transitions** - Professional feel
+10. **Production-Ready** - Deployment-ready design
+
+## 🌍 Contact Information
+
+### Footer & Contact Page
+- **Email**: sujanbharati00@gmail.com
+- **Phone**: +977 9847258796
+- **Location**: Kathmandu, Nepal
 
 ---
 
-**Design Status**: Complete and Professional ✅
+**Design Status**: Professional, Modern, and Deployment-Ready ✅
